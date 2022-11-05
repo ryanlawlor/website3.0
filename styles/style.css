@@ -16,51 +16,40 @@ body {
   overflow: overlay;
   box-sizing: border-box;
   position: relative;
-  overflow-x: hidden;
 }
 body a {
   text-decoration: none;
 }
-body header {
+body .header {
   width: 100%;
   position: fixed;
   background-color: #0e141b;
-  z-index: 1000;
+  z-index: 10;
   color: #fff;
   display: block;
 }
-@media only screen and (max-width: 56.25em) {
-  body header {
-    max-width: 898px;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  body header {
-    max-width: 599px;
-  }
-}
-body header nav {
+body .header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 5rem;
   visibility: hidden;
-  -webkit-animation: fadeIn 1s ease forwards;
-          animation: fadeIn 1s ease forwards;
+  -webkit-animation: fadeIn 2s ease forwards;
+          animation: fadeIn 2s ease forwards;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 @media only screen and (max-width: 56.25em) {
-  body header nav {
+  body .header nav {
     padding: 0 2rem;
   }
 }
-body header nav .logo-container {
+body .header nav .logo-container {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-body header nav .logo-container .header-logo {
+body .header nav .logo-container .header-logo {
   width: 5rem;
   height: 5rem;
   margin-right: 2rem;
@@ -69,15 +58,15 @@ body header nav .logo-container .header-logo {
   overflow: hidden;
 }
 @media only screen and (max-width: 56.25em) {
-  body header nav .logo-container .header-logo {
+  body .header nav .logo-container .header-logo {
     width: 4.5rem;
     height: 4.5rem;
   }
 }
-body header nav .logo-container .header-logo img {
+body .header nav .logo-container .header-logo img {
   height: 100%;
 }
-body header nav .logo-container a {
+body .header nav .logo-container a {
   font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -85,28 +74,28 @@ body header nav .logo-container a {
   transition: 0.3s;
   color: #fff;
 }
-body header nav .logo-container a:hover {
+body .header nav .logo-container a:hover {
   color: #46EC99;
 }
 @media only screen and (max-width: 37.5em) {
-  body header nav .nav-links {
+  body .header nav .nav-links {
     display: none;
   }
 }
-body header nav .nav-links ul {
+body .header nav .nav-links ul {
   display: flex;
   list-style-type: none;
 }
-body header nav .nav-links ul li {
+body .header nav .nav-links ul li {
   display: block;
   padding: 3rem 1.8rem;
 }
 @media only screen and (max-width: 56.25em) {
-  body header nav .nav-links ul li {
+  body .header nav .nav-links ul li {
     padding: 3rem 0.5rem;
   }
 }
-body header nav .nav-links ul li a {
+body .header nav .nav-links ul li a {
   color: #fff;
   transition: 0.3s;
   word-spacing: 5px;
@@ -115,24 +104,24 @@ body header nav .nav-links ul li a {
   text-decoration: none;
 }
 @media only screen and (max-width: 56.25em) {
-  body header nav .nav-links ul li a {
+  body .header nav .nav-links ul li a {
     font-size: 1.4rem;
   }
 }
-body header nav .nav-links ul li a span {
+body .header nav .nav-links ul li a span {
   font-weight: bold;
   font-size: 1.6rem;
   font-weight: 700;
 }
 @media only screen and (max-width: 56.25em) {
-  body header nav .nav-links ul li a span {
+  body .header nav .nav-links ul li a span {
     display: none;
   }
 }
-body header nav .nav-links ul li a:hover {
+body .header nav .nav-links ul li a:hover {
   color: #46EC99;
 }
-body header nav .nav-links ul li .resume-button {
+body .header nav .nav-links ul li .resume-button {
   color: #46EC99;
   background-color: transparent;
   border: 1px solid #46EC99;
@@ -140,14 +129,14 @@ body header nav .nav-links ul li .resume-button {
   padding: 10px 20px;
   cursor: pointer;
 }
-body header nav .nav-links ul li .resume-button:hover {
+body .header nav .nav-links ul li .resume-button:hover {
   background-color: rgba(70, 236, 153, 0.4588235294);
 }
-body header nav .nav-menu-icon {
+body .header nav .nav-menu-icon {
   display: none;
   padding: 1.5rem 0;
 }
-body header nav .nav-menu-icon .ham {
+body .header nav .nav-menu-icon .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
@@ -156,37 +145,37 @@ body header nav .nav-menu-icon .ham {
   -ms-user-select: none;
   user-select: none;
 }
-body header nav .nav-menu-icon .hamRotate.active {
+body .header nav .nav-menu-icon .hamRotate.active {
   transform: rotate(45deg);
 }
-body header nav .nav-menu-icon .hamRotate180.active {
+body .header nav .nav-menu-icon .hamRotate180.active {
   transform: rotate(180deg);
 }
-body header nav .nav-menu-icon .line {
+body .header nav .nav-menu-icon .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
   stroke: #fff;
   stroke-width: 4;
   stroke-linecap: round;
 }
-body header nav .nav-menu-icon .ham4 .top {
+body .header nav .nav-menu-icon .ham4 .top {
   stroke-dasharray: 40 121;
 }
-body header nav .nav-menu-icon .ham4 .bottom {
+body .header nav .nav-menu-icon .ham4 .bottom {
   stroke-dasharray: 40 121;
 }
-body header nav .nav-menu-icon .ham4.active .top {
+body .header nav .nav-menu-icon .ham4.active .top {
   stroke-dashoffset: -68px;
 }
-body header nav .nav-menu-icon .ham4.active .bottom {
+body .header nav .nav-menu-icon .ham4.active .bottom {
   stroke-dashoffset: -68px;
 }
 @media only screen and (max-width: 37.5em) {
-  body header nav .nav-menu-icon {
+  body .header nav .nav-menu-icon {
     display: block;
   }
 }
-body header .nav-menu {
+body .header .nav-menu {
   background: #fff;
   position: absolute;
   width: 100%;
@@ -197,7 +186,7 @@ body header .nav-menu {
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
-body header .nav-menu li a {
+body .header .nav-menu li a {
   display: block;
   text-decoration: none;
   padding: 2.5rem 3rem;
@@ -209,18 +198,19 @@ body header .nav-menu li a {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: color 0.3s;
+  width: 100%;
 }
-body header .nav-menu li span {
+body .header .nav-menu li span {
   font-size: 1.6rem;
   font-weight: bold;
   font-weight: 800;
 }
-body header .nav-menu li .open-in-new {
+body .header .nav-menu li .open-in-new {
   font-size: 2.5rem;
   font-weight: 100;
   transform: translateY(25%);
 }
-body header .menu-active {
+body .header .menu-active {
   visibility: visible;
   opacity: 1;
 }
@@ -255,8 +245,8 @@ body .hero .hero-content {
   transform: translate(-50%, -50%);
   max-width: 100rem;
   width: 85%;
-  -webkit-animation: fadeIn 1s ease;
-          animation: fadeIn 1s ease;
+  -webkit-animation: fadeIn 2s ease;
+          animation: fadeIn 2s ease;
 }
 @media only screen and (max-width: 37.5em) {
   body .hero .hero-content {
@@ -319,8 +309,8 @@ body .hero .hero-socials {
   transform: translateY(-50%);
   padding: 0.75rem;
   visibility: hidden;
-  -webkit-animation: fadeIn 1s ease forwards;
-          animation: fadeIn 1s ease forwards;
+  -webkit-animation: fadeIn 2s ease forwards;
+          animation: fadeIn 2s ease forwards;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
@@ -497,9 +487,13 @@ body .experience .experience-content .experience-column .experience-logo .comcas
 body .experience .experience-content .experience-column .experience-logo .fandm {
   height: 100%;
 }
+@media only screen and (max-width: 37.5em) {
+  body .experience .experience-content .experience-column .experience-logo .fandm {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 56.25em) {
   body .experience .experience-content .experience-column .experience-logo img {
-    width: 100%;
     -o-object-fit: scale-down;
        object-fit: scale-down;
   }
@@ -678,8 +672,7 @@ body footer .footer-bottom a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #aaa;
-  border: 3px solid rgba(0, 0, 0, 0);
+  background-color: rgba(136, 136, 136, 0.5843137255);
   border-radius: 10px;
 }
 
